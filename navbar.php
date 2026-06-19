@@ -226,17 +226,8 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
             <li>
                 <a href="<?php echo $prefix; ?>profil" class="<?php echo is_active('profil', $current_page); ?>">PROFIL</a>
             </li>
-            <li class="dropdown-desktop">
-                <button class="<?php echo ($current_page === 'event' || $current_page === 'special_events') ? 'text-gold' : 'text-gray'; ?>">
-                    EVENT
-                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20" style="display:inline-block;vertical-align:middle;">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <ul class="dropdown-menu-desktop">
-                    <li><a href="<?php echo $prefix; ?>event" class="text-gray hover:text-white">EVENT</a></li>
-                    <li><a href="<?php echo $prefix; ?>special_events" class="text-gray hover:text-white">EVENT SPESIAL</a></li>
-                </ul>
+            <li>
+                <a href="<?php echo $prefix; ?>event" class="<?php echo is_active('event', $current_page); ?>">EVENT</a>
             </li>
             <li><a href="<?php echo $prefix; ?>pesan" class="<?php echo is_active('pesan', $current_page); ?>">TIKET</a></li>
             <li><a href="<?php echo $prefix; ?>komposisi" class="<?php echo is_active('komposisi', $current_page); ?>">KOMPOSISI</a></li>
@@ -268,7 +259,6 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
 
     <a href="<?php echo $prefix; ?>profil" class="<?php echo is_active('profil', $current_page); ?>">PROFIL</a>
     <a href="<?php echo $prefix; ?>event" class="<?php echo is_active('event', $current_page); ?>">EVENT</a>
-    <a href="<?php echo $prefix; ?>special_events" class="<?php echo is_active('special_events', $current_page); ?>">EVENT SPESIAL</a>
     <a href="<?php echo $prefix; ?>pesan" class="<?php echo is_active('pesan', $current_page); ?>">TIKET</a>
     <a href="<?php echo $prefix; ?>komposisi" class="<?php echo is_active('komposisi', $current_page); ?>">KOMPOSISI</a>
     <a href="<?php echo $prefix; ?>berita" class="<?php echo is_active('berita', $current_page); ?>">BERITA</a>
